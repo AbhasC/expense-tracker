@@ -1,0 +1,338 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7B21DE;
+  /* height: 100vh; */
+  padding: 5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  background-color: #84DE21;
+  /* height: 90vh; */
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.display h1 {
+  font-size: 3rem;
+  padding: 0 0 30px 0;
+}
+
+.display .bal-amt {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.display .bal-amt span {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.display .income-expense {
+  font-size: 1.25rem;
+  height: 100px;
+  display: flex;
+  border: 3px solid black;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 90%;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #DE7B21;
+}
+
+.display .income-expense .income {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+  color: rgb(47, 14, 176);
+  height: 60%;
+  border-right: 2px solid black;
+}
+
+.display .income-expense .expense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+  color: rgb(152, 32, 76);
+  height: 60%;
+  border-left: 2px solid black;
+}
+
+.display .history h3 {
+  font-size: 1.5rem;
+  border-bottom: 2.5px solid black;
+  margin-bottom: 50px;
+}
+
+.transaction h3{
+  margin-top: 30px;
+}
+
+.display .transaction form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.display .transaction h3 {
+  font-size: 1.5rem;
+  border-bottom: 2.5px solid black;
+}
+
+.display .transaction .inc-exp {
+  display: flex;
+}
+
+#l1,
+#l2 {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.display .transaction input[type="text"],
+.display .transaction input[type="number"] {
+  margin: 0;
+  display: flex;
+  /* flex-direction: column; */
+  /* position: relative; */
+  /* margin: 0 calc((100% - 80%) / 2); m2/4*/
+  /* margin: 0 auto; */
+  align-self: center;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  padding: 8px 2%;
+  border-radius: 8px;
+  background-color: white;
+  /* padding: 0 10%; */
+  border: 1px solid black;
+}
+
+.display .transaction input[type="number"]{
+  margin-bottom: 20px;
+}
+
+#i1,
+#i2 {
+  /* background-color: darkorange; */
+  display: flex;
+  /* flex-direction: column; */
+  /* padding: 0 10%; */
+  justify-content: center;
+  align-items: center;
+}
+
+form > .inc-exp {
+  /* background-color: bisque; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  height: 35px;
+  width: 85%;
+  /* background-color: black; */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid black;
+  margin: 10px 0;
+}
+
+form > .inc-exp > label {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  width: calc(100% / 2);
+  padding: 1px;
+  /* margin: 10px 0 10px 0; */
+  height: 100%;
+  /* border-radius: 25px; */
+  cursor: pointer;
+  background-color: rgb(158, 159, 158);
+}
+
+form > .sub-but {
+  background-color: rgb(10, 76, 158);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 30%; */
+  padding: 12px;
+  border-radius: 20px;
+  color: rgb(107, 238, 238);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#rad-inc[type="radio"]:checked + label{
+  background-color: green;
+}
+
+#rad-exp[type="radio"]:checked + label {
+  background-color: rgb(223, 9, 9);
+}
+
+form > .inc-exp > input {
+  display: none;
+}
+
+.bor{
+    background-color: black;
+    height: 100%;
+    width: 2px;
+}
+
+.history ul{
+  margin: 0;
+  cursor: pointer;
+}
+
+.history li{
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  align-self: center;
+  /* justify-content: space-around; */
+  width: 85%;
+  height: 30px;
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
+  background-color: rgb(206, 154, 240);
+  padding-right: 2vw;
+  padding-left: 3vw;
+}
+
+.history span{
+  /* display: flex;
+  flex-direction: column;
+  align-self: center; */
+  /* margin-left: auto; */
+  width: 30%;
+  /* background-color: red; */
+  /* text-align: center; */
+}
+
+.history li span:nth-of-type(1){
+  /* background-color: red; */
+  margin-left: 5%;
+  margin-right: auto;
+  /* width: 50%; */
+  text-align: left;
+}
+
+.history li span:nth-of-type(2){
+  text-align: right;
+}
+
+.history li *{
+  transition: all 0.3s ease;
+}
+
+.history li:hover span:nth-of-type(2){
+  margin: 0 auto;
+  margin-right: auto;
+}
+
+.history button{
+  /* margin: 4px 0 4px 0; */
+  opacity: 0;
+  /* position: absolute; */
+  /* right: calc(25%); */
+  background-color: red;
+  font-weight: bolder;
+  border: 1px solid black;
+  width: 0;
+  overflow: hidden;
+}
+
+.history img{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-self: center; */
+  /* height:60%; */
+  width: 5%;
+  /* width: 20px;
+   */
+   aspect-ratio: 1;
+   /* margin: auto 0; */
+   /* margin-right: auto; */
+}
+
+li:hover button{
+  opacity: 1;
+  width: 20%;
+  margin-left: auto;
+}
